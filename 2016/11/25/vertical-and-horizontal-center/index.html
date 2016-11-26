@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>航航工作室</title>
+  <title>垂直水平居中 | 航航工作室</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Keep Learning">
-<meta property="og:type" content="website">
-<meta property="og:title" content="航航工作室">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="垂直居中方法一适合单行垂直居中，当元素内容是单行的，并且其高度是固定不变的，将“line-height”设置成和“height”高度一样就行了。但这种方法只适合单行文本元素，在多行中是不行的。
+HTML1&amp;lt;div class=&quot;vertiacl&quot;&amp;gt;context&amp;lt;/div&amp;gt;
+CSS1234.vertical&amp;#123;    height: 100px;    line-h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="垂直水平居中">
+<meta property="og:url" content="http://yoursite.com/2016/11/25/vertical-and-horizontal-center/index.html">
 <meta property="og:site_name" content="航航工作室">
-<meta property="og:description" content="Keep Learning">
+<meta property="og:description" content="垂直居中方法一适合单行垂直居中，当元素内容是单行的，并且其高度是固定不变的，将“line-height”设置成和“height”高度一样就行了。但这种方法只适合单行文本元素，在多行中是不行的。
+HTML1&amp;lt;div class=&quot;vertiacl&quot;&amp;gt;context&amp;lt;/div&amp;gt;
+CSS1234.vertical&amp;#123;    height: 100px;    line-h">
+<meta property="og:updated_time" content="2016-11-26T02:58:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="航航工作室">
-<meta name="twitter:description" content="Keep Learning">
+<meta name="twitter:title" content="垂直水平居中">
+<meta name="twitter:description" content="垂直居中方法一适合单行垂直居中，当元素内容是单行的，并且其高度是固定不变的，将“line-height”设置成和“height”高度一样就行了。但这种方法只适合单行文本元素，在多行中是不行的。
+HTML1&amp;lt;div class=&quot;vertiacl&quot;&amp;gt;context&amp;lt;/div&amp;gt;
+CSS1234.vertical&amp;#123;    height: 100px;    line-h">
   
     <link rel="alternate" href="/atom.xml" title="航航工作室" type="application/atom+xml">
   
@@ -66,9 +73,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-vertical-and-horizontal-center" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-vertical-and-horizontal-center" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/11/25/vertical-and-horizontal-center/" class="article-date">
   <time datetime="2016-11-25T12:47:22.000Z" itemprop="datePublished">2016-11-25</time>
@@ -85,8 +90,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/25/vertical-and-horizontal-center/">垂直水平居中</a>
+    <h1 class="article-title" itemprop="name">
+      垂直水平居中
     </h1>
   
 
@@ -146,265 +151,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-minimax" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/24/minimax/" class="article-date">
-  <time datetime="2016-11-24T03:14:53.000Z" itemprop="datePublished">2016-11-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/24/minimax/">Minimax</a>
-    </h1>
+    <a href="/2016/11/24/minimax/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Minimax</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Minimax是一个非常著名的算法，常用于双人的博弈游戏，游戏双方一方为Max另一方为Min，Max希望能最大化自己的利益而Min希望最小化Min的利益。在开始学习Minimax之前，先看看别的一些相关的算法。</p>
-<h2 id="Maximax"><a href="#Maximax" class="headerlink" title="Maximax"></a>Maximax</h2><p>Maximax的原则是使玩家总是选择可能受益最大的选择，而不考虑其他。让我们假设有这样一个游戏，两个玩家，甲和乙，各有一张红牌和蓝牌，双方选择一张同时展示。规则：如果甲选择红牌，无论乙选择什么，双方不输不赢；甲选择蓝牌，当乙选择了蓝牌，则甲赚1000元，乙选择红牌，甲输给乙1000元。可由下表展示甲的支付矩阵。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th>乙</th>
-<th>乙</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td>红</td>
-<td>蓝</td>
-</tr>
-<tr>
-<td>甲</td>
-<td>红</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>甲</td>
-<td>蓝</td>
-<td>-1000</td>
-<td>1000</td>
-</tr>
-</tbody>
-</table>
-<p>依据Maximax算法的原则，甲始终会选择蓝牌，因为只有选择蓝牌才有可能获得最多的1000块收益。但是由上图也可以看出，当乙足够理智时，乙不会选择蓝牌，只会选择红牌，因为乙选择蓝牌只可能平或者输，选红牌则是平或赢。在这种情况下，甲如果按照Maximax算法，只会一直输下去。</p>
-<p>Maximax算法本身是不合理的，它只考虑自己的最大获利情况而忽视了别等玩家的选择，naive。</p>
-<h2 id="Maximin"><a href="#Maximin" class="headerlink" title="Maximin"></a>Maximin</h2><p>与Maximax相对的一个算法原则就是Maximin，与Maximax的乐观态度不同，Maximin是悲观的，总是考虑最悲观的情况。一个典型的情况就是老虎机，玩家有两个选择，玩或不玩，玩则消费1元，但可能中奖1000元，不玩则没有中奖机会当然也不会消费自己的1元。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th>机会</th>
-<th>机会</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td>赢</td>
-<td>输</td>
-</tr>
-<tr>
-<td>玩家</td>
-<td>玩</td>
-<td>1000</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>玩家</td>
-<td>不玩</td>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<p>由于玩家遵循Maximin的原则，他永远都不会玩老虎机，为了保证自己不会输1元。这种原则是相当消极的，不论回报有多高，他也不会冒任何风险。</p>
-<h2 id="单人游戏的Minimax"><a href="#单人游戏的Minimax" class="headerlink" title="单人游戏的Minimax"></a>单人游戏的Minimax</h2><p>Minimax后悔原则是以Minimax原则为依据的，它更倾向于单人的游戏决策。它依赖于遗憾矩阵。想象有一家公司，正在决定是否需要推进一个研究项目，该项目回花费成本c元，如果项目成功，会带来r元的回报，失败则一无所有。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th>研究</th>
-<th>研究</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td>成功</td>
-<td>失败</td>
-</tr>
-<tr>
-<td>公司</td>
-<td>推进</td>
-<td>r-c</td>
-<td>-c</td>
-</tr>
-<tr>
-<td>公司</td>
-<td>不推进</td>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<p>依据Maximax原则，只要r-c大于零，公司就会一直推进项目；而依据Maximin原则，当有-c的风险时，公司永远不会推进项目。而依据Minimax，情况则会复杂一点。</p>
-<p>我们需要绘制一个后悔矩阵，来展示机会成本，就拿这个公司来说，当公司推进了项目而且项目失败了，公司的后悔值是c，也就是项目成本；如果公司推进并成功了，将没有后悔值；如果公司没有推进但项目如果推进了就会成功，那后悔值是r-c即项目等回报；如果公司没推进且项目推进了也不会成功，则后悔值是0。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th>研究</th>
-<th>研究</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td>成功</td>
-<td>失败</td>
-</tr>
-<tr>
-<td>公司</td>
-<td>推进</td>
-<td>0</td>
-<td>c</td>
-</tr>
-<tr>
-<td>公司</td>
-<td>不推进</td>
-<td>r-c</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<p>我们的目的事最小化后悔值可能的最大值。即当r-c&gt;c时，公司要推进项目，反之则不推进。换句话讲，只有当回报r大于两倍多成本c时才会推进项目。</p>
-<h2 id="双人游戏的Minimax"><a href="#双人游戏的Minimax" class="headerlink" title="双人游戏的Minimax"></a>双人游戏的Minimax</h2><p>有这么一个例子：1943年，盟军收到报告称日军有一个护卫队将要渡海去加强他们的部队。护卫队有两条路可以走，一条往北，一条往南。盟军必须决定如何调遣他们的侦察机——往南还是往北——为了尽快拦截护卫队。下面的矩阵显示了日本和盟军可能作出的决定和盟军可能的轰炸天数。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th>日军路线</th>
-<th>日军路线</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td>北</td>
-<td>南</td>
-</tr>
-<tr>
-<td>盟军路线</td>
-<td>北</td>
-<td>2</td>
-<td>2</td>
-</tr>
-<tr>
-<td>盟军路线</td>
-<td>南</td>
-<td>1</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<p>根据这个矩阵可以看出，盟军最好的情况是盟军往南，日军往南，可以轰炸3天，而日军最好的情况时日军往北，盟军往南，盟军只能轰炸1天。</p>
-<p>为了最小化最糟糕的情况，盟军应该选择向北侦查，这可以让他们确保有2天的轰炸时间，而往南则要面临只能轰炸1天的风险。所以，根据minimax的原则，盟军要选择北方。</p>
-<p>日军可以采用相同的策略。如果往南，日军要面临3天轰炸的风险，所以日军也选择北方。</p>
-<p>事实上，盟军和日军都选择了北方，日军受到了2天的轰炸。</p>
-<p>根据之前的矩阵，日军和盟军双方都确定都选择北方是对双方都是最好的结果。在对手都是理性的情况下，不可能有更好的结果了。在这个例子中，minimax和maximin产生了相同的结果。如果盟军选择maximax，他们会选择南方，而结果是只有1天的轰炸时间。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/24/minimax/" data-id="civymo6df00004g8l6s8pgm77" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-link-and-import" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/23/link-and-import/" class="article-date">
-  <time datetime="2016-11-23T11:52:56.000Z" itemprop="datePublished">2016-11-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/WEB/">WEB</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/23/link-and-import/">link和@import</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>面试时被问到的一个题，当时不太了解，只知道link在HTML中使用，而@import在CSS中使用，回来查查功课，重新学习梳理一下两者区别。</p>
-<p>本质上来讲link属于HTML标签，只能放在HTML源代码中使用，而@import可以看作是CSS样式，用来引用CSS样式。@import在HTML中使用时需要<code>&lt;style type=&quot;text/css&quot;&gt;</code>标签，或可以直接在CSS文件中使用，来引入其他CSS样式。同时，link标签除了可以加载CSS外，还可以定义RSS、定义rel链接属性等，而@import就只能加载CSS了。</p>
-<p>link和@import的加载顺序也不同，当一个页面被加载时，link引用的CSS会同时加载，而@import引用的CSS会等页面加载完成后再加载。</p>
-<p>由于@import时CSS2.1提出的，所以老浏览器不支持，只有在IE5以上才能识别，而link可以被任何浏览器识别。</p>
-<p>还有一点差别就是@import不能被DOM控制，用javascript控制DOM去改变样式时，只能用link标签。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/23/link-and-import/" data-id="civymo6dj00014g8l3g47zsh4" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
