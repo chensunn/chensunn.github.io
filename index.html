@@ -68,6 +68,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-canvas-css" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/27/canvas-css/" class="article-date">
+  <time datetime="2016-11-27T07:27:05.000Z" itemprop="datePublished">2016-11-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/WEB/">WEB</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/27/canvas-css/">canvas标签的width和height讨论</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>设置canvas的大小总共有三种方法：</p>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>通过CSS样式来控制大小。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">canvas</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>直接在canvas标签内设置大小。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"myCanvas"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h2><p>使用javascript来设置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mycanvas = <span class="built_in">document</span>.getElementById(<span class="string">'myCanvas'</span>);</div><div class="line">mycanvas.width = <span class="number">300</span>;</div><div class="line">mycanvas.height = <span class="number">300</span>;</div></pre></td></tr></table></figure>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>这里有个一问题，使用CSS和在标签内设置大小，效果是不同的。CSS设置会使canvas里的内容自动放大，而标签内设置则不会。导致这种问题的原因是canvas本身。</p>
+<p>canvas标签包含元素本身和元素绘图表面（drawing surface），它们有着各自的尺寸。所以canvas的大小指的是两个大小。这两个大小默认都是300*150像素的。</p>
+<p>通过CSS来设置时，仅仅是对canvas元素本身设置大小，而元素绘图表面没有改变，所以通过上述CSS代码设置会使该canvas元素本身变为300<em>300，而元素绘图表面仍然是300</em>150。当元素本身大小和绘图表面大小不一样时，浏览器会对绘图表面进行缩放来适应元素大小。所以会出现不符合预期的效果。而在canvas标签内定义大小则是同时定义两者的大小。通过javascript来设置也同标签内定义一样。</p>
+<p>要想获得预期效果，最好是在标签内定义大小，或通过javascript来定义。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/27/canvas-css/" data-id="ciw0d5pmw0000gy8lzs59wob4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CANVAS/">CANVAS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-vertical-and-horizontal-center" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/11/25/vertical-and-horizontal-center/" class="article-date">
@@ -138,7 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/25/vertical-and-horizontal-center/" data-id="civymo6dp00044g8l5kylgqo2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/25/vertical-and-horizontal-center/" data-id="ciw0d5pnb0005gy8lhht7ewt6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
@@ -346,7 +399,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/24/minimax/" data-id="civymo6df00004g8l6s8pgm77" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/24/minimax/" data-id="ciw0d5pn90004gy8ls33047kl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
@@ -393,7 +446,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/23/link-and-import/" data-id="civymo6dj00014g8l3g47zsh4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/23/link-and-import/" data-id="ciw0d5pn20001gy8lgm0atl5p" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li></ul>
@@ -424,7 +477,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CANVAS/">CANVAS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
     </div>
   </div>
 
@@ -434,7 +487,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a>
+      <a href="/tags/CANVAS/" style="font-size: 10px;">CANVAS</a> <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a>
     </div>
   </div>
 
@@ -454,6 +507,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/11/27/canvas-css/">canvas标签的width和height讨论</a>
+          </li>
         
           <li>
             <a href="/2016/11/25/vertical-and-horizontal-center/">垂直水平居中</a>
